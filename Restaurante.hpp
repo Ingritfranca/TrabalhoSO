@@ -1,3 +1,0 @@
-#ifndef RESTAURANTE_HPP
-#define RESTAURANTE_HPP
-
