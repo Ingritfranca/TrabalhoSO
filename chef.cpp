@@ -26,7 +26,7 @@ Atendimento::Atendimento(unsigned int chefId, unsigned int mesaId)
         quemSou = "Filho";
         //fecha o lado de escrita porque o filho só lê dados
         close(fd[1]);
-         O filho fica aguardando mensagens enviadas via pipe
+        // O filho fica aguardando mensagens enviadas via pipe
         iniciar();
         //Finaliza o processo filho corretamente
         _exit(0);

@@ -4,7 +4,7 @@
 #include <queue>
 #include <stack>
 #include "chef.hpp"
-#include "Mesa.hpp"
+#include "mesa.hpp"
 
 //Estrutura que guarda pedidos quando não tem chef disponível 
 struct PedidoPendente {
@@ -29,7 +29,8 @@ private:
     //Todas as mesas do restaurante
     std::vector<Mesa> mesas;
     //Pilha onde guardo os chefs livres
-    std::stack<int> chefsLivres;
+    std::vector<int> mesaChef;
+    std::queue<int> chefsLivres;
     //Fila para guardar pedidos quando todos os chefs estão ocupados
     std::queue<PedidoPendente> filaEspera;
 };

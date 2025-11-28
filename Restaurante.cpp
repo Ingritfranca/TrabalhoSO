@@ -31,7 +31,7 @@ void Restaurante::processarPedido(unsigned int mesaId, const std::string& item) 
     //Verificação O(1) olhando a pilha
     if (!chefsLivres.empty()) {
         //Pega um chef livre em O(1)
-        int idChef = chefsLivres.top();
+        int idChef = chefsLivres.front();
         chefsLivres.pop();
 
         //Associa esse chef à mesa 
