@@ -21,23 +21,19 @@ Atendimento::Atendimento(unsigned int chefId, unsigned int mesaId)
         exit(EXIT_FAILURE);
     }
 
-    // Se pid == 0 significa que é o processo filho
+    //Se pid == 0 significa que é o processo filho
     if (pid == 0) { 
         quemSou = "Filho";
-
         //fecha o lado de escrita porque o filho só lê dados
         close(fd[1]);
-
-        // O filho fica aguardando mensagens enviadas via pipe
+         O filho fica aguardando mensagens enviadas via pipe
         iniciar();
-
-        // Finaliza o processo filho corretamente
+        //Finaliza o processo filho corretamente
         _exit(0);
 
     } else {
         //Caso contrário é o processo pai
         quemSou = "Pai";
-
         //O pai não precisa ler o pipe então fecha o lado de leitura
         close(fd[0]);
     }

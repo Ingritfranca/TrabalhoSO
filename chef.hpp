@@ -5,7 +5,7 @@
 //Esta classe representa um atendimento, o atendimento vai ter subprocesso vinculado a ele
 class Atendimento final {
 public:
-    //Construtor da classe, para se criar um atendimento é necessário informar o ID do chef e da mesa
+    //Construtor da classe para criar um atendimento é necessário informar o ID do chef e da mesa
     Atendimento(unsigned int chefId, unsigned int mesaId);
     //Destrutor da classe ao chama-lo o subprocesso vinculado a este atendimento deve ser encerrado.
     ~Atendimento();
